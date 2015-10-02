@@ -2,13 +2,13 @@
 .SUFFIXES:
 #---------------------------------------------------------------------------------
 
+
 ifeq ($(strip $(DEVKITARM)),)
 $(error "Please set DEVKITARM in your environment. export DEVKITARM=<path to>devkitARM")
 endif
 
 TOPDIR ?= $(CURDIR)
 include $(DEVKITARM)/3ds_rules
-
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
 # BUILD is the directory where object files & intermediate files will be placed
@@ -32,17 +32,18 @@ SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 NO_SMDH		:=	1
-
+EXTRAFLAGS  :=  -DNO_LOGO
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
+
 ARCH	:=	-march=armv6k -mtune=mpcore -mfloat-abi=hard
 
 CFLAGS	:=	-g -Wall -O2 -mword-relocations \
 			-fomit-frame-pointer -ffast-math \
 			$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS
+CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS $(EXTRAFLAGS)
 
 CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
 

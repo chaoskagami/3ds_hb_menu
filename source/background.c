@@ -5,7 +5,10 @@
 #include "water.h"
 #include "gfx.h"
 
+#ifndef NO_LOGO
 #include "logo_bin.h"
+#endif
+
 #include "bubble_bin.h"
 
 #define BG_WATER_CONTROLPOINTS (100)
@@ -117,6 +120,8 @@ void drawBackground(u8 bgColor[3], u8 waterBorderColor[3], u8 waterColor[3])
 	// Bubbles belong on both screens so they should be drawn second to last.
 	drawBubbles();
 
+	#ifndef NO_LOGO
 	// Finally draw the logo.
 	gfxDrawSpriteAlphaBlend(GFX_TOP, GFX_LEFT, (u8*)logo_bin, 113, 271, 64, 80);
+	#endif
 }
