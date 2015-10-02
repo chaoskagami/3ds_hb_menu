@@ -3,15 +3,15 @@
 
 #include <3ds.h>
 
-#define WATERBORDERCOLOR (u8[]){66, 224, 255}
-#define WATERCOLOR (u8[]){66, 163, 255}
+#define WATERBORDERCOLOR (u8[]){100, 100, 100}
+#define WATERCOLOR (u8[]){60, 60, 60}
 
 #define BEERBORDERCOLOR (u8[]){240, 240, 240}
 #define BEERCOLOR (u8[]){188, 157, 75}
 
-#define BGCOLOR (u8[]){0, 132, 255}
+#define BGCOLOR (u8[]){16, 16, 16}
 
-#define BUBBLE_COUNT 15
+#define BUBBLE_COUNT 25
 
 typedef struct
 {

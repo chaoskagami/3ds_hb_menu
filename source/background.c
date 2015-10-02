@@ -39,7 +39,7 @@ void initBackground(void)
 void updateBubble(bubble_t* bubble)
 {
 	// Float up the screen.
-	bubble->y += 2;
+	bubble->y += 1;
 
 	// Check if faded away, then reset if gone.
 	if(bubble->fade < 10)
