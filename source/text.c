@@ -3,11 +3,12 @@
 #include <string.h>
 #include <3ds.h>
 #include "text.h"
-#include "font_bin.h"
+// #include "font_bin.h"
 
 #include "font.h"
 
-const u8* font = font_bin;
+// Unused. I think.
+// const u8* font = font_bin;
 
 // @chaoskagami - It's open source, so yes it is meant to be readable.
 
@@ -83,6 +84,7 @@ int drawCharacter(u8* fb, font_s* font, char c, s16 x, s16 y, u16 w, u16 h)
 int getStringLength(font_s* f, char* str)
 {
 	if(!f) f = &fontDefault;
+
 	if(!str) return 0;
 	int ret;
 

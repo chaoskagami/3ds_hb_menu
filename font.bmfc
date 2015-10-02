@@ -2,11 +2,11 @@
 fileVersion=1
 
 # font settings
-fontName=Segoe UI Semilight
+fontName=Liberation Sans
 fontFile=
 charSet=0
-fontSize=16
-aa=1
+fontSize=13
+aa=2
 scaleH=100
 useSmoothing=1
 isBold=1
@@ -16,7 +16,7 @@ disableBoxChars=1
 outputInvalidCharGlyph=0
 dontIncludeKerningPairs=0
 useHinting=1
-renderFromOutline=0
+renderFromOutline=1
 useClearType=1
 
 # character alignment
