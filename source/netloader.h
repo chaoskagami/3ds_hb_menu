@@ -1,4 +1,5 @@
-#pragma once
+#ifndef NETLOADER_H
+#define NETLOADER_H
 
 #define NETLOADER_PORT 17491
 
@@ -13,3 +14,5 @@ int netloader_init(void);
 int netloader_loop(void);
 int netloader_exit(void);
 int netloader_draw_error(void);
+
+#endif

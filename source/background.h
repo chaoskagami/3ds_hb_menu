@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BACKGROUND_H
+#define BACKGROUND_H
+
 #include <3ds.h>
 
 #define WATERBORDERCOLOR (u8[]){66, 224, 255}
@@ -20,3 +22,5 @@ typedef struct
 void initBackground(void);
 void updateBackground(void);
 void drawBackground(u8 bgColor[3], u8 waterBorderColor[3], u8 waterColor[3]);
+
+#endif

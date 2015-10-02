@@ -1,4 +1,6 @@
-#pragma once
+#ifndef FILESYSTEM_H
+#define FILESYSTEM_H
+
 #include <3ds.h>
 #include "menu.h"
 
@@ -20,3 +22,5 @@ void addDirectoryToMenu(menu_s* m, char* path);
 void scanHomebrewDirectory(menu_s* m);
 void changeDirectory(const char* path);
 void printDirectory(void);
+
+#endif

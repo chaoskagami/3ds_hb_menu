@@ -1,4 +1,6 @@
-#pragma once
+#ifndef REGIONFREE_H
+#define REGIONFREE_H
+
 #include <3ds.h>
 
 #include "menu.h"
@@ -18,3 +20,5 @@ Result regionFreeRun();
 void regionFreeUpdate();
 
 Result loadGamecardIcon(smdh_s* out);
+
+#endif
